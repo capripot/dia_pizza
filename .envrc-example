@@ -1,0 +1,5 @@
+# get theses at https://www.yelp.com/developers/v2/manage_api_keys
+YELP_CONSUMER_KEY=
+YELP_CONSUMER_SECRET=
+YELP_TOKEN=
+YELP_TOKEN_SECRET=

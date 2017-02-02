@@ -1,0 +1,64 @@
+<div class="page-section row">
+  <div class="columns small-12 medium-8 medium-centered">
+
+    <div class="row">
+      <div class="columns small-12">
+        <h1>Pizza restaurant reviews</h1>
+        <p><small>Enter a name of pizza restaurant and the number of results you want to see</small></p>
+      </div>
+    </div>
+
+    <% if params[:search].present? && @reviews.blank? %>
+      <p class="callout alert">Sorry, we can't find any restaurant with that name</p>
+    <% end %>
+
+    <div class="row">
+      <%= form_for :search, method: :get do |f| %>
+        <div class="columns small-12 medium-8">
+          <%= f.label :name, "Restaurant name" %>
+          <%= f.text_field :name, value: (params[:search] ? params[:search][:name] : '') %>
+        </div>
+        <div class="columns small-12 medium-2">
+          <%= f.label :number_of_reviews, "# of reviews" %>
+          <%= f.select :number_of_reviews do %>
+            <% (1..10).each do |n| %>
+              <option <%= params[:search] && params[:search][:number_of_reviews] == n.to_s ? 'selected' : '' %>><%= n %></option>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="columns small-12 medium-2">
+          <label>&nbsp;</label>
+          <%= f.submit "Search", class: "button primary"  %>
+        </div>
+      <% end %>
+    </div>
+
+    <% if @reviews.present? %>
+      <div class="row">
+        <div class="columns small-12">
+          <h3><%= link_to @restaurant.name, @restaurant.url, target: :blank %> <em>restaurant</em></h3>
+          <p>Located at <%= link_to @restaurant.address, "https://www.google.com/maps/place/#{@restaurant.address}", target: :blank %></p>
+          <p>Last <%= pluralize(@reviews.size, "review") %> for this restaurant</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Review</th>
+                <th>Rating<br><small>(out of 5)</small></th>
+              </tr>
+            </thead>
+            <theader>
+              <tr>
+                <th colspan=2>Average of <%= @avg_rating %> stars</th>
+              </tr>
+            </theader>
+            <tbody>
+              <%= render @reviews %>
+            </tbody>
+
+          </table>
+          <p><small>Based on Yelp results, cached at <%= @restaurant.created_at %></small></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

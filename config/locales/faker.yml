@@ -1,0 +1,19 @@
+en:
+  faker:
+    company:
+      buzzwords:
+        - ["Devpost", "ChallengePost"]
+        - ["is", "was"]
+        - ["the", "a"]
+        - ["home", "pond", "nest"]
+        - ["for", "4", "f0r"]
+        - ["hackers.", "pirates.", "devs."]
+        - ["Meet", "Poke"]
+        - ["great", "ok-ish"]
+        - ["developers.", "knitters.", "ping pong fanatics."]
+        - ["Happily", "Painfully"]
+        - ["build"]
+        - ["your", "you're", "ur"]
+        - ["portfolio."]
+        - ["Compete in"]
+        - ["hackathons.", "challenges."]

@@ -1,0 +1,16 @@
+---
+global: &global
+  cloudname: devpost
+  api_key: '<%= ENV['CLOUDINARY_API_KEY'] %>'
+  api_secret: '<%= ENV['CLOUDINARY_API_SECRET'] %>'
+  enhance_image_tag: true
+  static_image_support: true
+
+production:
+  <<: *default
+development:
+  <<: *default
+  static_image_support: false
+test:
+  <<: *default
+  static_image_support: false

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <% if Rails.env.test? %>
+      <base href="<%#= root_url %>">
+    <% end %>
+    <title>Pizza reviews</title>
+    <meta name="description" content="<%= page_description %>">
+    <%= yield(:meta_tags) if content_for?(:meta_tags) %>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag    "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css" %>
+    <%= stylesheet_link_tag    "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" %>
+    <%= javascript_include_tag "application" %>
+
+    <%= yield :head if content_for?(:head) %>
+
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+    <%= yield(:beginning_of_body) if content_for?(:beginning_of_body) %>
+    <%= yield %>
+    <%= yield(:end_of_body) if content_for?(:end_of_body) %>
+
+  </body>
+</html>

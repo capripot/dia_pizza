@@ -1,0 +1,26 @@
+development:
+  root: devpost.dev
+  secure: "secure.devpost.dev"
+  info: "info.devpost.dev"
+  post: "post.devpost.dev"
+  clients:
+    - devpost.dev
+
+test:
+  root: example.com
+  secure: "secure.example.com"
+  info: "info.example.com"
+  post: "post.example.com"
+  clients:
+    - example.com
+
+production: &production
+  root: <%= ENV.fetch("PLATFORM_DOMAIN", "devpost.com") %>
+  secure: secure.<%= ENV.fetch("PLATFORM_DOMAIN", "devpost.com") %>
+  info: info.<%= ENV.fetch("PLATFORM_DOMAIN", "devpost.com") %>
+  post: post.<%= ENV.fetch("PLATFORM_DOMAIN", "devpost.com") %>
+  clients:
+    - devpost.com
+    - staging.devpost.com
+
+staging: *production

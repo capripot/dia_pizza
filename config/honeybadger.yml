@@ -1,0 +1,3 @@
+---
+env: <%= ENV["LOGICAL_ENV"] %>
+report_data: <%= ENV["REPORT_ERRORS"] == "true" %>

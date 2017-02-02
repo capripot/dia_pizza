@@ -1,0 +1,27 @@
+enabled: &enabled
+  site_id: <%= ENV['CUSTOMERIO_SITE_ID'] %>
+  secret_key: <%= ENV['CUSTOMERIO_SECRET_KEY'] %>
+  enabled: true
+  develop: false  # useful for customer.io dev environments
+
+disabled: &disabled
+  enabled: false
+  develop: false
+  site_id: a_site_id
+  secret_key: a_secret_key
+
+production:
+  <<: *enabled
+
+staging:
+  <<: *enabled
+  develop: true
+
+development:
+  <<: *disabled
+  develop: true
+
+test:
+  <<: *disabled
+profile:
+  <<: *disabled

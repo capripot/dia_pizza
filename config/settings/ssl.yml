@@ -1,0 +1,13 @@
+default: &default
+  enabled: false
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production: &production
+  enabled: <%= ENV.fetch("HTTPS_ENABLED", false) %>
+
+staging: *production

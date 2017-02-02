@@ -1,0 +1,7 @@
+development:
+  host: localhost:5000
+
+production: &production
+  host: <%= ENV["ASSET_HOST"] %>
+
+staging: *production

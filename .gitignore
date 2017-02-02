@@ -1,0 +1,30 @@
+# See https://help.github.com/articles/ignoring-files for more about ignoring files.
+
+# Ignore bundler config
+/.bundle
+
+# Ignore all logfiles and tempfiles
+/log/*
+!/log/.keep
+/tmp
+
+# npm
+node_modules
+
+# direnv
+.envrc
+
+# local/dev Procfiles
+Procfile.local
+
+# local config
+/config/database.yml
+
+.byebug_history
+*.rdb
+public/uploads/tmp/**/*
+
+# If you find yourself ignoring .DS_Store or other temporary files,
+# make it a global rule by doing this:
+# > echo ".DS_Store" > ~/.gitignore_global
+# > git config --global core.excludesfile '~/.gitignore_global'
