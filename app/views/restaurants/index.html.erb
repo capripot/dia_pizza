@@ -21,7 +21,7 @@
         <div class="columns small-12 medium-2">
           <%= f.label :number_of_reviews, "# of reviews" %>
           <%= f.select :number_of_reviews do %>
-            <% (1..10).each do |n| %>
+            <% (1..9).each do |n| %>
               <option <%= params[:search] && params[:search][:number_of_reviews] == n.to_s ? 'selected' : '' %>><%= n %></option>
             <% end %>
           <% end %>

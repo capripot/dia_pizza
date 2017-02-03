@@ -41,7 +41,7 @@ class YelpService
     }
 
     reviews = yelp_html.css(".review-list ul li")
-    min = [reviews.size, 11].min
+    min = [reviews.size, 10].min
 
     (2..min).each do |i|
       review_container_rule = ".review-list ul li:nth-child(#{i}) .review-wrapper .review-content"
