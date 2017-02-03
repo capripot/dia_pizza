@@ -136,6 +136,12 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  # factory girl
+  gem "factory_girl_rails", "~> 4.0"
+
+  # fake data for tests
+  gem "faker", "~> 1.6"
 end
 
 group :development do
@@ -165,12 +171,6 @@ group :development do
 
   # kill theses nasty N+1 queries
   gem "bullet", "~> 5.1.0"
-
-  # fake data for tests
-  gem "faker", "~> 1.6"
-
-  # factory girl
-  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :test do
@@ -192,18 +192,12 @@ group :test do
   # test rake tasks
   gem "fantaskspec", "~> 1.0.0"
 
-  # test warden authtification gem (in Satellite)
-  gem "warden-rspec-rails"
-
-  # test queuing
-  gem 'test_hutch', git: "git@github.com:challengepost/test_hutch.git"
-
   # travel in time within your tests
   gem "timecop"
 
   # avoid external requests by recording them
   gem "vcr", "~> 3.0.3"
 
-  # fake web requests DEPRECATED!
-  gem "fakeweb", "~> 1.3.0"
+  # fake web requests
+  gem "webmock"
 end

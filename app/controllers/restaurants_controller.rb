@@ -10,7 +10,7 @@ class RestaurantsController < ApplicationController
       @reviews = @restaurant.reviews.limit(@number_of_reviews || 10) if @restaurant
 
       if @reviews.present?
-        @avg_rating = @reviews.pluck(:rating).reduce(:+) / @reviews.size
+        @avg_rating = (@reviews.pluck(:rating).reduce(:+) / @reviews.size.to_f).round(2)
       end
     end
   end

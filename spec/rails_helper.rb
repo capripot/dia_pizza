@@ -47,10 +47,6 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 
   config.include Rails.application.routes.url_helpers
-  config.include Warden::Test::Helpers, type: :feature
-  config.include SpecHelpers::AccountHelper, type: :feature
-  config.include SpecHelpers::ControllerHelper, type: :controller
-  config.include SpecHelpers::FeatureHelper, type: :feature
 end
 
 Shoulda::Matchers.configure do |config|
@@ -62,8 +58,6 @@ end
 
 require "capybara/rails"
 require "capybara/poltergeist"
-require "pundit/rspec"
-require 'pundit/matchers'
 
 module Capybara::DSL
   def click_link_with_href(href)

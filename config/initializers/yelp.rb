@@ -6,3 +6,4 @@ Yelp.client.configure do |config|
   config.token = Figleaf::Settings.yelp.token
   config.token_secret = Figleaf::Settings.yelp.token_secret
 end
+

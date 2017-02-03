@@ -18,3 +18,7 @@ development:
 
 test:
   <<: *default
+  consumer_key: test
+  consumer_secret: test
+  token: test
+  token_secret: test

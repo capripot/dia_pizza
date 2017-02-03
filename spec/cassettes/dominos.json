@@ -1,0 +1,73 @@
+{
+  "region": {
+    "span": {
+      "latitude_delta": 0,
+      "longitude_delta": 0
+    },
+    "center": {
+      "latitude": 40.7553756,
+      "longitude": -73.9889241
+    }
+  },
+  "total": 229,
+  "businesses": [
+    {
+      "is_claimed": true,
+      "rating": 2.5,
+      "mobile_url": "https://m.yelp.com/biz/dominos-pizza-new-york-9?adjust_creative=J7Nf3wBYLUtCWx8gOn7Dsg&utm_campaign=yelp_api&utm_medium=api_v2_search&utm_source=J7Nf3wBYLUtCWx8gOn7Dsg",
+      "rating_img_url": "https://s3-media4.fl.yelpcdn.com/assets/2/www/img/c7fb9aff59f9/ico/stars/v1/stars_2_half.png",
+      "review_count": 34,
+      "name": "Domino's Pizza",
+      "rating_img_url_small": "https://s3-media4.fl.yelpcdn.com/assets/2/www/img/8e8633e5f8f0/ico/stars/v1/stars_small_2_half.png",
+      "url": "https://www.yelp.com/biz/dominos-pizza-new-york-9?adjust_creative=J7Nf3wBYLUtCWx8gOn7Dsg&utm_campaign=yelp_api&utm_medium=api_v2_search&utm_source=J7Nf3wBYLUtCWx8gOn7Dsg",
+      "categories": [
+        [
+          "Pizza",
+          "pizza"
+        ],
+        [
+          "Chicken Wings",
+          "chicken_wings"
+        ],
+        [
+          "Sandwiches",
+          "sandwiches"
+        ]
+      ],
+      "menu_date_updated": 1472925142,
+      "phone": "2129440400",
+      "snippet_text": "Went here friend wanted pizza, place has some chairs to sit but not many. We order the $20.99 deal which large pizza with 2 toppings, order wings and we...",
+      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/FHI5U1DWof7j6UWq4jUwnA/ms.jpg",
+      "snippet_image_url": "https://s3-media3.fl.yelpcdn.com/assets/srv0/yelp_styleguide/bf5ff8a79310/assets/img/default_avatars/user_medium_square.png",
+      "display_phone": "+1-212-944-0400",
+      "rating_img_url_large": "https://s3-media2.fl.yelpcdn.com/assets/2/www/img/d63e3add9901/ico/stars/v1/stars_large_2_half.png",
+      "menu_provider": "single_platform",
+      "id": "dominos-pizza-new-york-9",
+      "is_closed": false,
+      "location": {
+        "cross_streets": "7th Ave & 8th Ave",
+        "city": "New York",
+        "display_address": [
+          "227 W 40th St",
+          "Theater District",
+          "New York, NY 10018"
+        ],
+        "geo_accuracy": 8,
+        "neighborhoods": [
+          "Theater District",
+          "Midtown West"
+        ],
+        "postal_code": "10018",
+        "country_code": "US",
+        "address": [
+          "227 W 40th St"
+        ],
+        "coordinate": {
+          "latitude": 40.7552757,
+          "longitude": -73.9887619
+        },
+        "state_code": "NY"
+      }
+    }
+  ]
+}

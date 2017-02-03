@@ -1,6 +1,7 @@
 # Pizza rates
 
 Homework for Dia&Co by Ronan
+[![CircleCI](https://circleci.com/bb/capripot/pizza_dia.svg?style=svg)](https://circleci.com/bb/capripot/pizza_dia)
 
 ## Task
 
