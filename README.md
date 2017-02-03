@@ -1,7 +1,8 @@
-# Pizza rates
+# Pizza rates [![CircleCI](https://circleci.com/bb/capripot/pizza_dia.svg?style=svg)](https://circleci.com/bb/capripot/pizza_dia)
 
 Homework for Dia&Co by Ronan
-[![CircleCI](https://circleci.com/bb/capripot/pizza_dia.svg?style=svg)](https://circleci.com/bb/capripot/pizza_dia)
+
+### ▶️ [Live app](http://dia-pizza.herokuapp.com)
 
 ## Task
 
