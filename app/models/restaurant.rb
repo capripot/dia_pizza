@@ -5,7 +5,7 @@ class Restaurant < ActiveRecord::Base
   validates :url, url: true
 
   def self.get(name)
-    restaurants = Restaurant.where("LOWER(name) LIKE ?", "%#{name.downcase}%")
+    restaurants = Restaurant.where("LOWER(search) LIKE ? OR LOWER(name) LIKE ?", "%#{name.downcase}%", "%#{name.downcase}%")
 
     return restaurants.first if restaurants.present? && restaurants.first.created_at > 1.day.ago
 
@@ -13,7 +13,7 @@ class Restaurant < ActiveRecord::Base
 
     infos = YelpService.retrieve_infos_for(name)
     if infos.present?
-      restaurant = Restaurant.create(name: infos[:name], url: infos[:url], address: infos[:address])
+      restaurant = Restaurant.create(search: name, name: infos[:name], url: infos[:url], address: infos[:address])
       infos[:reviews].each do |review|
         restaurant.reviews.create(content: review[:content], rating: review[:rating])
       end
